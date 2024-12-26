@@ -1,0 +1,127 @@
+.burger {
+  display: block;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+
+nav.active .menu {
+  right: -1%;
+  /*Viser menuen frem når den er aktiv.*/
+}
+ul.menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  line-height: 140%;
+  height: 90vh;
+  z-index: -2;
+
+  overflow-y: auto;
+  scrollbar-width: none;
+  right: -100%;
+  /*Sætter menuen 100% over til højre
+    når den ikke er i brug (Skjuler den)*/
+  margin-top: 0;
+
+  width: 30vw;
+  transition: right 0.5s ease;
+  /* background-color: var(--primary); */
+  padding: 2%;
+  padding-top: 80px;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+ul.menu > li {
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 5vw;
+  font-size: 120%;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.burger .line {
+  width: 100%;
+  height: 2px;
+  /* background-color: var(--tertiary); */
+  background-color: black;
+
+  margin-bottom: 5px;
+  transition: 0.5s linear;
+}
+
+@media screen and (min-width: 800px) {
+  nav.active .menu {
+    right: 0;
+    /*Viser menuen frem når den er aktiv.*/
+  }
+  header > nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: right;
+    align-items: center;
+  }
+  ul.menu {
+    padding-top: 0;
+    height: auto;
+    z-index: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    overflow-x: hidden;
+
+    justify-content: space-between;
+    position: relative;
+    line-height: 140%;
+    right: 0;
+    display: flex;
+    margin: 5%;
+    transition: right 0.5s ease;
+    background-color: transparent;
+    padding: 0;
+    border-style: none;
+    z-index: 2;
+  }
+  ul.menu li > a {
+    font-size: 120%;
+    transition: 0.15s ease-in-out;
+  }
+  ul.menu li > a:hover {
+    font-size: 130%;
+  }
+  a#logo {
+    transition: 0.15s ease-in-out;
+  }
+  a#logo:hover {
+    transform: scale(110%);
+  }
+  li.burgerwarning,
+  .burger {
+    display: none;
+  }
+  header {
+    height: 10vh;
+  }
+}
