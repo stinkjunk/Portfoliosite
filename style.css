@@ -1,3 +1,73 @@
-body{
-    overflow-x: hidden;
+/* Fonte */
+
+.alata-regular {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: normal;
+}
+
+/* Variabler */
+:root {
+    --primary: #F5F5F5;
+    --secondary: #171717;
+    --tint: #0050B5;
+}
+/* Font-styling */
+h1,
+h2,
+h3,
+h4,
+p,
+a
+{
+    color: var(--secondary);
+}
+
+h1{
+    font-family: "Alata", sans-serif;
+}
+
+h2,
+h3{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+}
+
+h2,
+ul.menu > li a {
+    font-weight: 400;
+    font-size: 2rem;
+    text-decoration: none;
+
+}
+
+p,
+a{
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+/* -------- */
+body {
+  overflow-x: hidden;
 }
