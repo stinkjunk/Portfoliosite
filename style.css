@@ -20,12 +20,20 @@
   font-style: normal;
 }
 
+.kode-mono {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+  }
+
 /* Variabler */
 :root {
   --headerheight: 15vh;
   --primary: #f5f5f5;
   --secondary: #171717;
   --tint: #0050b5;
+
 }
 /* Font-styling */
 h1,
@@ -35,6 +43,39 @@ h4,
 p,
 a {
   color: var(--secondary);
+}
+
+a:hover{
+    color: var(--tint);
+    transition: 0.1s linear;
+}
+
+.codegallery > div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.codegallery h3{
+    text-align: center;
+}
+article.dropdown,
+.codegallery pre{
+    background-color: rgba(0, 0, 0, 0.041);
+
+}
+    .codegallery pre{
+
+    font-family: "Kode Mono", monospace;
+    color: var(--secondary);
+    border-radius: 10px;
+    padding: 2%;
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: var(--secondary); */
+
+
 }
 
 h1 {
@@ -56,13 +97,19 @@ ul.menu > li a {
 }
 
 p,
-a {
+a,
+li {
   font-family: "DM Sans", sans-serif;
   font-weight: 300;
 }
 
-li {
-  list-style: none;
+header li{
+    list-style: none;
+}
+
+span.smaller{
+    font-size: 80%;
+    font-style: italic;
 }
 
 /* -------- */
@@ -103,6 +150,12 @@ section.frontpage > .textbox {
   align-self: baseline;
 }
 
+section.portfolio > div > .textbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 section.frontpage > h1 {
   grid-row: 1;
 }
@@ -120,12 +173,16 @@ section.frontpage > .heroimg {
   background-repeat: no-repeat;
   grid-row: 2;
 }
-
+section.portfolio div.hero > div,
 .heroimg > div {
   width: 100%;
   height: 100%;
   background-color: var(--tint);
   mix-blend-mode: color;
+}
+
+section.portfolio div.hero > div{
+    mix-blend-mode:hard-light;
 }
 
 section.portfolio {
@@ -139,18 +196,9 @@ section.portfolio > h1 {
   margin: 0;
 }
 
-section.portfolio div.cta {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-section.portfolio div.cta > a.downbutton,
-section.portfolio div.cta > p {
-  font-weight: 600;
-  display: none;
-}
+
+
 
 footer {
   bottom: 0;
@@ -159,7 +207,11 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 95%;
-  z-index: -1;
+  z-index: -4;
+}
+
+article.dropdown li{
+    margin-bottom: 2%;
 }
 
 footer p {
@@ -172,10 +224,17 @@ a.cta {
   color: var(--primary);
   background-color: var(--tint);
   padding: 1%;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: inset 0px 0px 5px -2px var(--primary);
   transition: 0.1s linear;
+  max-width: fit-content;
 }
+
+section.portfolio > div > .textbox > a.cta{
+    align-self: center;
+  }
+
+
 
 a.downbutton {
   aspect-ratio: 1 / 1;
@@ -201,6 +260,7 @@ a.downbutton:hover {
 }
 a.cta:hover {
   box-shadow: inset 0px 0px 8px -2px var(--primary);
+  color: var(--primary);
 }
 
 a.downbutton:hover > div {
@@ -211,9 +271,9 @@ a.downbutton:hover > div {
 
 article.dropdown {
   border-radius: 10px;
-  border-style: solid;
+  /* border-style: solid;
   border-width: 1px;
-  border-color: var(--secondary);
+  border-color: var(--secondary); */
   overflow: hidden;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -323,6 +383,8 @@ article.dropdown .dropbtn.active{
     display: none;
   }
 
+
+
   section.portfolio > div {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -333,19 +395,31 @@ article.dropdown .dropbtn.active{
     margin: 0;
   }
 
-  section.portfolio div.cta {
-    margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  section.portfolio div.cta > a.cta {
-    display: none;
-  }
 
-  section.portfolio div.cta > a.downbutton,
-  section.portfolio div.cta > p {
+
+  section.portfolio > div > .hero {
     display: block;
+    background-image: url(content/images/DALL-E_design_portfolio.webp);
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    scale: 80%;
+  }
+
+  section.portfolio div.hero > a.downbutton,
+  section.portfolio div.hero > p {
+    display: block;
+  }
+
+  .codegallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+  }
+
+  .codegallery pre{
+    width: 100%;
+    height: 100%;
   }
 }
