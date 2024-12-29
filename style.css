@@ -22,9 +22,11 @@
 
 /* Variabler */
 :root {
+    --headerheight: 15vh;
     --primary: #F5F5F5;
     --secondary: #171717;
     --tint: #0050B5;
+    
 }
 /* Font-styling */
 h1,
@@ -38,11 +40,12 @@ a
 }
 
 h1{
-    font-family: "Alata", sans-serif;
+    font-size: 3rem;
 }
 
 h2,
-h3{
+h3,
+h1{
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
 }
@@ -68,6 +71,124 @@ li{
 
 
 /* -------- */
+html,
 body {
   overflow-x: hidden;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+main{
+    padding: 3%;
+}
+
+
+
+section.fullsize{
+    height: 100vh;
+    /* look into this lolol ecks dee */
+}
+
+section.frontpage{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr auto 1fr;
+    gap: 5%;
+}
+
+section.frontpage > .textbox{
+    grid-row: 3;
+    width: 100%;
+    align-self: baseline;
+}
+
+section.frontpage > h1{
+    grid-row: 1;
+}
+
+section.frontpage > .textbox h1{
+    display: none;
+}
+
+section.frontpage > .heroimg {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    background-image: url(content/images/Godtbillede.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: 2;
+    
+}
+
+.heroimg > div{
+    width: 100%;
+    height: 100%;
+    background-color: var(--tint);
+    mix-blend-mode: color;
+}
+
+footer{
+    bottom: 0;
+    left: 2.5%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    z-index: -1;
+    
+}
+
+footer p{
+    font-size: 80%;
+    color: var(--tint)
+}
+
+
+@media screen and (min-width: 800px) {
+    main{
+        padding: 0%;
+        padding-top: var(--headerheight);
+    }
+
+   
+    body{
+        margin: 5%;
+        margin-top: 0%;
+    }
+
+    section.frontpage{
+        
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr;
+    }
+
+    section.frontpage > .heroimg{
+        aspect-ratio: unset;
+        width: 100%;
+        height: 100%;
+        grid-column: 2;
+        transform: scale(80%);
+        grid-row: 1;
+    }
+    
+    section.frontpage > .textbox{
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    section.frontpage > .textbox h1{
+        display: block;
+    }
+    
+    section.frontpage > h1{
+        display: none;
+    }
+
+
 }

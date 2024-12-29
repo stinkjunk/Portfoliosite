@@ -1,7 +1,26 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.scrolltext {
+  display: none;
+}
+
+.scrolltext > p {
+  color: var(--secondary);
+  opacity: 20%;
+  font-weight: 100;
+  flex-grow: 1;
+}
+
 .burger {
   display: block;
   padding: 10px;
   margin-right: 10px;
+  position: absolute;
+  right: 0;
 }
 
 .burger.active .line:nth-child(1) {
@@ -20,13 +39,17 @@
 }
 
 nav.active .menu {
-  right: -1%;
+  right: 0%;
+  margin-top: 0;
   /*Viser menuen frem når den er aktiv.*/
 }
 ul.menu {
+  background-color: var(--primary);
+  transform: translateY(-1%);
   display: flex;
   position: absolute;
   top: 0;
+  margin-top: 0;
   line-height: 140%;
   height: 90vh;
   z-index: -2;
@@ -38,7 +61,7 @@ ul.menu {
     når den ikke er i brug (Skjuler den)*/
   margin-top: 0;
 
-  width: 30vw;
+  width: 50vw;
   transition: right 0.5s ease;
   /* background-color: var(--primary); */
   padding: 2%;
@@ -46,6 +69,9 @@ ul.menu {
 
   flex-direction: column;
   justify-content: space-evenly;
+
+  overflow-x: hidden;
+
 }
 
 ul.menu > li {
@@ -55,6 +81,7 @@ ul.menu > li {
   text-align: right;
   padding-right: 5vw;
   font-size: 120%;
+  z-index: 1;
 }
 
 .burger {
@@ -72,10 +99,13 @@ ul.menu > li {
 }
 
 @media screen and (min-width: 800px) {
-
-    header{
-        height: 15vh;
-    }
+  header {
+    height: var(--headerheight);
+    background-color: var(--primary);
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
   nav.active .menu {
     right: 0;
     /*Viser menuen frem når den er aktiv.*/
@@ -126,5 +156,30 @@ ul.menu > li {
   li.burgerwarning,
   .burger {
     display: none;
+  }
+  .scrolltext {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 10%;
+    width: auto;
+    animation-name: scrollleft;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  }
+  .scrolltext > p {
+    font-size: calc(0.8 * var(--headerheight));
+  }
+}
+
+@keyframes scrollleft {
+    
+  to {
+    /* transform: translateX(calc(- (var(--headerheight)-10%))); */
+    transform: translateX(-100%);
   }
 }
