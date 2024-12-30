@@ -30,14 +30,14 @@
           <!-- <li class="burgerwarning">
                 <p>(Burger menu er stadig under konstruktion!)</p>
               </li> -->
-          <div class="scrolltext">
+          <li class="scrolltext">
             <p>magnus&nbsp;krahl</p>
             <p>magnus&nbsp;krahl</p>
             <p>magnus&nbsp;krahl</p>
             <p>magnus&nbsp;krahl</p>
             <p>magnus&nbsp;krahl</p>
             <p>magnus&nbsp;krahl</p>
-          </div>
+          </li>
         </ul>
         <div class="burger">
           <div class="line"></div>
@@ -62,7 +62,7 @@
             <a href="#t01" class="cta">Check det ud!</a>
           </div>
           <div class="hero">
-            <div> <div></div></div>
+            <div><div></div></div>
           </div>
         </div>
       </section>
@@ -113,16 +113,25 @@
           <p>
             Min første side uploadede jeg i dette tema - Dette var
             visitkortøvelsen, som kan ses
-            <a href="https://magdesigns.dk/kea/02_web/visitkort/">her</a>.
+            <a
+              href="https://magdesigns.dk/kea/02_web/visitkort/"
+              target="_blank"
+              >her</a
+            >.
           </p>
           <p>
             Derefter lærte jeg om styling - hvordan man styler samt laver
             mobilversion af en side, som kan ses
-            <a href="https://magdesigns.dk/kea/02_web/01_website/website-exp/"
+            <a
+              href="https://magdesigns.dk/kea/02_web/01_website/website-exp/"
+              target="_blank"
               >her</a
             >
           </p>
-          <p>Nedendunder er eksempler på kode, som er taget fra førnævnte mobilside:</p>
+          <p>
+            Nedendunder er eksempler på kode, som er taget fra førnævnte
+            mobilside:
+          </p>
           <div class="codegallery">
             <div>
               <h3>Eksempel på styling:</h3>
@@ -206,9 +215,284 @@ text-wrap: pretty;
                 ovenfor.</span
               >
             </li>
-            <li><b>Loven om kontinuitet:</b><br>
-            Siger at ting som er placeret langs en kontinuerlig linje eller kurve anses for at være relaterede.</li>
+            <li>
+              <b>Loven om kontinuitet:</b><br />
+              Siger at ting som er placeret langs en kontinuerlig linje eller
+              kurve anses for at være relaterede.
+            </li>
           </ul>
+        </div>
+      </article>
+      <article class="dropdown" id="t03">
+        <div class="top">
+          <h3>Tema 3 - Grundlæggende UX/UI</h3>
+          <div class="dropbtn"></div>
+        </div>
+        <div class="content">
+          <h2>Tema 3 - Grundlæggende UX/UI</h2>
+          <p>
+            Her begyndte det at blive seriøst - I dette tema lærte vi en masse,
+            om dels research og kodning. Udover dette var temaets opgave et
+            såkaldt "emnesite", hvor vi til min glæde selv skulle bestemme hvad
+            indholdet skulle være. I denne process lærte jeg blandt andet
+            hvordan man planlægger, laver research og mockups i Programmet
+            figma. Jeg vil herunder redegøre for hvad jeg har lært i dette tema
+            ud fra udviklingen af mit emnesite.
+          </p>
+          <h3>
+            Emnesite -
+            <a
+              href="https://magdesigns.dk/kea/03_ux/01_kodet_site/"
+              target="_blank"
+              >Heartha Systemet</a
+            >
+          </h3>
+          <p>
+            Da vi i begyndelsen af temaet blev informeret om temaopgavens natur,
+            vidste jeg med det samme hvad emnet i mit emnesite skulle være.
+            <br />Jeg var, til den tid vi fik opgaven, dybt fordybet i en meget
+            niche og nørdet hobby: At
+            <a
+              href="https://spaceengine.org/manual/making-addons/introduction/"
+              target="_blank"
+              >modificere</a
+            >
+            rumsimulations programmet
+            <a href="https://spaceengine.org/" target="_blank">SpaceEngine</a>
+            så jeg kunne lave mit eget
+            <a
+              href="https://steamcommunity.com/sharedfiles/filedetails/?id=3341099843"
+              target="_blank"
+              >fiktionelle solsystem</a
+            >. Det er dette solsystem (kaldet Heartha Systemet) som mit emnesite
+            fremviser som emne, såvel som hvordan jeg lavede det.
+          </p>
+          <h3>Brainstorm</h3>
+          <p>
+            Først brainstormede jeg idéer til min side, dens målgruppe og
+            design. Dette gjorde jeg i en figjam fil i Figma, som du kan
+            udforske herunder:
+          </p>
+          <iframe
+            class="figma"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/board/7WXgMgzZUXNgrpzzWcv1y5/Emnesite-Brainstorm?node-id=0-1&embed-host=share"
+            allowfullscreen
+          ></iframe>
+          <p>
+            Ud fra denne process kom jeg til nogle få konklusioner.<br /><br />Målgruppen
+            var svær at tyde da jeg havde valgt sådan et niche emne, men jeg
+            endte således med denne beskrivelse af den:
+          </p>
+          <ul>
+            <li>Nørdede folk; teknisk begavede</li>
+            <li>Aldersgruppe fra ~16 - 50år</li>
+            <li>
+              Interesseret i videnskab, det ydre rum og '<a
+                href="https://en.wikipedia.org/wiki/Worldbuilding"
+                target="_blank"
+                >worldbuilding</a
+              >''
+            </li>
+            <li>
+              Æstetisk Interesseret<br />
+              <span class="smaller"
+                >(Med dette menes, at en stor del af at lave et fiktionelt
+                solsystem uundgåeligt er det visuelle aspekt - udseendet af de
+                diverse planeter og måner. Derfor ville jeg påstå at målgruppen
+                også ville have en interesse i emnet fra en visuel-kunstnerisk
+                vinkel.)</span
+              >
+            </li>
+          </ul>
+          <p>
+            Ud fra denne redegørelse af min målgruppe har jeg også skrevet nogle
+            'user stories' - Historier fra hypotetiske medlemmer af målgruppen
+            som redegør for hvorfor de ville bruge siden. User stories består af
+            tre dele:
+          </p>
+          <ul>
+            <li>
+              Den første del beskriver den hypotetiske bruger: (<i>"Som X.."</i
+              >)
+            </li>
+
+            <li>
+              Den anden del består af hvad brugeren vil bruge produktet (i dette
+              tilfælde min side) til: (<i>"...vil jeg...</i>)
+            </li>
+            <li>
+              Hvorefter den og sidste del beskriver hvorfor: (<i
+                >"...så jeg..."</i
+              >)
+            </li>
+          </ul>
+          <p>Herunder er mine user stories:</p>
+
+          <div class="userstories">
+            <div>
+              <h4>User story 1</h4>
+              <p>
+                "Som sci fi worldbuilder<br /><br />
+                Vil jeg finde eksempler på worldbuilding af solsystemer<br /><br />
+                Så jeg kan få tips og inspiration til min verden"
+              </p>
+            </div>
+            <div>
+              <h4>User story 2</h4>
+              <p>
+                "Som æstetisk interesseret<br /><br />
+                Vil jeg gerne finde online kunst<br /><br />
+                Så jeg kan nyde det"
+              </p>
+            </div>
+            <div>
+              <h4>User story 3</h4>
+              <p>
+                "Som ny begyndende SpaceEngine modder<br /><br />
+                Vil jeg gerne finde et walkthrough a modding processen<br /><br />
+                Så jeg kan lære at lave mit eget system"
+              </p>
+            </div>
+          </div>
+          <p>
+            Baseret på denne målgruppe begyndte jeg derefter at skitsere sidens
+            design og indhold. Designmæssigt har jeg fremfundet tre værdi-ord
+            som sidens design helst skulle udstråle:
+          </p>
+          <ul>
+            <li>
+              <b>Intelligent</b><br />Siden skal værdsætte brugerens intelligens
+              - Den skal ikke fordumme indholdet, da min brugertype sansynligvis
+              allerede har en nørdet interesse for de relevante emner og derfor
+              er bekendt med meget af indholdet.
+            </li>
+            <li>
+              <b>Encyklopædisk</b><br />Siden skal præsentere informationen om
+              Heartha systemet som var det en encyklopædisk artikel om noget der
+              eksisterer i virkeligheden. På denne måde fremvises det diagetisk,
+              så brugeren bliver fordybet mere i narrativet og min
+              'worldbuilding'.
+            </li>
+            <li>
+              <b>Udstillende</b><br />Da en vigtig del af projektet er det
+              visuelle burde meget plads benyttes til at fremvise Heartha
+              systemet med billeder. "Galleri-agtigt" kunne man bruge synonymt
+              med dette værdi-ord; siden burde være dels encyklopædi, dels
+              kunstgalleri.
+            </li>
+          </ul>
+          <h3>Style-tile og prototype</h3>
+          <p>
+            Efter jeg havde redegjort for sidens basale grundsætninger i
+            research-fasen kunne jeg gå igang med at skitsere designet. Det
+            først jeg gjorde var at lave et "style-tile" i Figma som ville
+            redegøre for hjemmesidens stil. Herunder ses mit endelige style-tile
+            som jeg endte op med at bruge:
+          </p>
+          <iframe
+            class="figma"
+            width="800"
+            height="450"
+            src="https://embed.figma.com/proto/CNYHL6yJCuMTxUamWdiIRx/Emnesite-style?page-id=164%3A248&node-id=164-249&viewport=441%2C386%2C0.53&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+            allowfullscreen
+          ></iframe>
+          <p>
+            Bagefter besluttede jeg at lave en 'brugertest' på dette styletile,
+            hvor jeg fik resten af klassen til at vurdere hvor godt det er:
+          </p>
+          <iframe
+            class="figma"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR46nSK_n9nR_dLNJBgL8kwxRa2-q9mEunGMpH_09qAwqIBOs6URc6JXX9gUhI95Mrr5GLner5zs8e8/pubhtml?gid=1787143316&amp;single=true&amp;widget=true&amp;headers=false"
+          ></iframe>
+          <p>
+            Jeg besluttede mig at gå videre med denne style-tile, da jeg syntes
+            at feedback var tilstrækkeligt godt.
+          </p>
+          <h3>Hi-Fi Prototype</h3>
+          <p>
+            Baseret på dette lavede jeg min Hi-Fi prototype af siden, som en
+            slags guide-line til hvordan den endelige side skal se ud. Jeg
+            vælger ikke at embedde prototypen direkte, da jeg bekymrer mig for
+            at siden allerede lagger for meget med de figma embeds jeg allerede
+            har tilføjet; klik dog nedenunder for at se:
+          </p>
+          <div class="flex">
+            <a
+              class="cta"
+              target="_blank"
+              href="https://www.figma.com/proto/CNYHL6yJCuMTxUamWdiIRx/Emnesite-style?page-id=0%3A1&node-id=16-210&viewport=116%2C349%2C0.23&t=xbNHkISjsQU3zDs2-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=16%3A210"
+              >Hi-Fi Prototype</a
+            >
+            <a
+              class="cta"
+              target="_blank"
+              href="https://www.figma.com/design/CNYHL6yJCuMTxUamWdiIRx/Emnesite-style?node-id=0-1&t=tzf1ZIs99vr1H8Wm-1"
+              >Udforsk Figma filen</a
+            >
+          </div>
+          <h3>Kodning</h3>
+          <p>
+            Så begyndte kodningen! Måske ikke så meget at sige her - jeg var
+            måske lidt for ambitiøs med min side, til det punkt JavaScript var
+            nødvendigt før jeg havde lært sproget. Heldigvis kunne ChatGPT
+            hjælpe mig her! (Hvilket er helt fair skulle du spørge mig, vi havde
+            jo ikke haft om JS før da jeg kodede denne side.)
+          </p>
+          <p>
+            Hvis jeg skulle fremvise noget kode, kunne jeg vise noget CSS om
+            hvordan jeg f.eks stylede tekstbokse til have et glas-agtigt
+            udseende samt hvordan jeg fik min header til at sidde på venstre
+            side af skærmen i stedet for toppen.
+          </p>
+          <div class="codegallery">
+            <div>
+              <h3>Styling for 'glasset' look</h3>
+              <pre>
+.burger,
+.cta,
+.factbox {
+  border-radius: 23px;
+  border-color: #00000098;
+  box-shadow: inset 4px 4px 10px 5px rgba(100, 100, 100, 0.5);
+  padding: 10px 15px 10px 15px;
+  backdrop-filter: blur(3px);
+
+  background-color: rgba(0, 0, 0, 0.349);
+}
+
+/*Her får beskrivelsesboksene og knapperne deres karakteristiske glas-stil*/
+              </pre>
+            </div>
+            <div>
+              <h3>Header på siden</h3>
+              <pre>
+@media screen and (max-width: 800px) {
+ header,
+ footer {
+  mix-blend-mode: normal;
+  position: fixed;
+  right: 0%;
+  z-index: 500;
+  }
+            </pre
+              >
+            </div>
+          </div>
+          <h3>Færdig side</h3>
+          <p>
+            Med dette gjort, kan du se den færdige side med at klikke på knappen
+            herunder:
+          </p>
+          <div class="center">
+            <a
+              href="https://magdesigns.dk/kea/03_ux/01_kodet_site/"
+              target="_blank"
+              class="cta"
+              >Færdig side</a
+            >
+          </div>
         </div>
       </article>
     </main>
