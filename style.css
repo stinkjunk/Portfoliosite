@@ -49,17 +49,13 @@ a:hover {
   transition: 0.1s linear;
 }
 
-
-
 .codegallery > div {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding:3%;
+  padding: 3%;
   overflow-x: hidden;
 }
-
-
 
 .codegallery h3 {
   text-align: center;
@@ -95,8 +91,8 @@ article.dropdown .flex {
 .userstories > div h4 {
   text-align: center;
 }
-.codegallery pre::before{
-    overflow-x: hidden;
+.codegallery pre::before {
+  overflow-x: hidden;
 }
 .codegallery pre {
   font-family: "Kode Mono", monospace;
@@ -131,12 +127,12 @@ ul.menu > li a {
   text-decoration: none;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2%;
-    width: 100%;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 100%;
 }
 
 p,
@@ -201,13 +197,39 @@ section.frontpage > .textbox {
   align-self: baseline;
 }
 
-.diagram_container{
+.diagram_container {
   width: 100%;
 }
 
-.diagram_container img{
+.twingrid img,
+img.roundimg,
+.diagram_container img {
   width: 100%;
   border-radius: 10px;
+}
+
+.centerit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.centerit img {
+  height: auto;
+  margin: 2%;
+}
+
+.twingrid > div {
+  margin: 2%;
+}
+
+.twingrid.svg img {
+  height: 30cqh;
+  scale: 80%;
+}
+
+.twingrid p {
+  text-align: center;
 }
 
 section.portfolio > div > .textbox {
@@ -367,7 +389,7 @@ article.dropdown .dropbtn.active {
   rotate: 90deg;
 }
 
-.triframe{
+.triframe {
   display: flex;
   flex-direction: column;
 }
@@ -380,6 +402,25 @@ article.dropdown .dropbtn.active {
      
     
 } */
+
+.statemachine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.statemachine > div {
+  background-color: var(--secondary);
+
+  mask-image: url(content/images/state_machine_v2-2.svg);
+
+  height: 100%;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  scale: 90%;
+}
 
 @keyframes downbuttonhover {
   50% {
@@ -493,13 +534,46 @@ article.dropdown .dropbtn.active {
     height: 30vh;
   }
 
-  .diagram_container img{
+  .diagram_container img {
     scale: 80%;
-
   }
 
-  .triframe{
+  .triframe {
     flex-direction: row;
   }
 
+  .twingrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .twingrid.svg div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .twingrid.svg img {
+    height: 50%;
+    scale: 90%;
+  }
+
+  .centerit {
+    display: flex;
+    justify-content: center;
+    height: 50vw;
+    margin: 2%;
+  }
+
+  .centerit img {
+    height: 100%;
+    width: auto;
+  }
+
+  .statemachine {
+    height: 130vh;
+  }
+  .statemachine > div {
+    scale: 95%;
+  }
 }
