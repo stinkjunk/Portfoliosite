@@ -47,29 +47,74 @@
       </nav>
     </header>
     <main>
-      <div class="center">
+      <section class="fullsize minusfront about">
+        <div class="ptext">
+          <div class="portraet"><div></div></div>
+          <h1>Om Mig</h1>
+        </div>
+        <div id="aboutme">
+          <div>
+            <p>
+              Jeg har altid fundet det svært at beskrive mig selv. Skulle jeg
+              forsøge det, ville jeg sige, at jeg er et meget kreativt menneske
+              med et naturligt øje for æstetik. Jeg interesserer mig for nørdede
+              ting som filosofi og det ydre rum, og er nok typen som til tider
+              vil drive samtalen hen på syrede spor.
+            </p>
+            <a href="#cv" class="cta">CV</a>
+            <h3>Peter's beskrivelse</h3>
+            <p>
+              Jeg har desuden spurgt min ven Peter for at hjælpe mig med at
+              beskrive mig selv. <br /><br /><span class="skiftdesc"
+                >Se Peter's beskrivelse &gt;</span
+              >
+            </p>
+          </div>
+          <div>
+            <p class="quote">
+              "Magnus er en af mine bedste venner. Han er ægte og ærlig - han er
+              en som man kan stole på. Han er sjov, og er altid godt selskab.
+              Han er en æstetikker med stor sans for hans egen stil. Magnus ved
+              meget - han er nysgerrig på verdenen, universet, mennesker og
+              deres ideer. Han er en tænkende mand - nogen gange tænker han for
+              meget. Vigtigst af alt har han et stort og godt hjerte - jeg har
+              aldrig set Magnus skade nogen. Hvis bare han var klar over, hvor
+              god han er. Man kan sikkert sige, at Magnus er en 1'er - jeg har
+              aldrig mødt andre som ham!"
+            </p>
+            <p><b>-Peter</b></p>
+            <p><span class="skiftdesc">&lt; Egen beskrivelse</span></p>
+          </div>
+        </div>
+      </section>
+      <div class="center" id="cv">
         <h2>CV</h2>
       </div>
       <div class="cv">
         <div class="info">
-          <!-- <p>test</p>
-              <p>test</p>
-              <p>test</p>
-              <p>test</p> -->
           <div class="date">
+            <!-- Her vises informationen om
+            datoen. Noter at .timeline
+            KUN SKAL placeres her, i 
+            den første .date inden i
+            .info for at virke ordentligt. -->
             <div class="timeline"></div>
             <div class="circinfo">
               <p>2001 (Født)</p>
+              <!-- Skriv dato ovenfor. -->
               <div class="circ"></div>
             </div>
           </div>
           <div class="date">
             <div class="circinfo">
               <p>2007</p>
+
               <div class="circ"></div>
             </div>
           </div>
           <div class="period">
+            <!-- Kopier denne struktur for at tilføje tekst mellem
+            den forrige og næste dato. -->
             <div class="bar">
               <p><b>2007 - 2017:</b> Folkeskole, Hyltebjerg Skole</p>
             </div>
@@ -116,6 +161,12 @@
           </div>
           <div class="date">
             <div class="circinfo">
+              <!-- Her er intet <p> element,
+              så ingen dato vises. Jeg har brugt
+              denne teknik for at have mellemrum
+              mellem to perioder som respektivt
+              slutter og starter på den
+              samme date. -->
               <div class="circ"></div>
             </div>
           </div>
@@ -137,6 +188,10 @@
             <div class="circinfo">
               <div class="circ"></div>
             </div>
+            <!-- Det er absolut nødvendigt at du
+            har to .circinfo elementer på din
+            date, og at nederste også har
+            klassen .end -->
             <div class="circinfo end">
               <p>Slut 2025</p>
               <div class="circ"></div>
@@ -156,5 +211,6 @@
     </footer>
     <script src="menu.js"></script>
     <script src="cv.js"></script>
+    <script src="skiftdesc.js"></script>
   </body>
 </html>

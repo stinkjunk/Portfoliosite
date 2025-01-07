@@ -132,7 +132,7 @@ article.dropdown .flex {
   padding: 4%;
   margin: 2%;
 }
-
+p.quote,
 .userstories > div p {
   font-style: italic;
 }
@@ -350,6 +350,7 @@ footer p {
   font-size: 80%;
   color: var(--tint);
 }
+span.skiftdesc,
 a.cta {
   text-decoration: none;
   font-size: 120%;
@@ -360,6 +361,7 @@ a.cta {
   box-shadow: inset 0px 0px 5px -2px var(--primary);
   transition: 0.1s linear;
   max-width: fit-content;
+  cursor: pointer;
 }
 
 section.portfolio > div > .textbox > a.cta {
@@ -388,6 +390,7 @@ a.downbutton > div {
 a.downbutton:hover {
   box-shadow: inset 0px 0px 20px -2px var(--primary);
 }
+span.skiftdesc:hover,
 a.cta:hover {
   box-shadow: inset 0px 0px 8px -2px var(--primary);
   color: var(--primary);
@@ -597,20 +600,20 @@ article.dropdown .dropbtn.active {
   align-self: center;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   overflow: visible;
 
 }
 
 .cv .timeline {
-  background-color: grey;
+  background-color: grey; 
   position: absolute;
   /* height: 100cqh; */
-  width: 3px;
+  width: 3px; 
   border-radius: 5px;
   right: 0;
-  transform: translateX(90%);
+  transform: translateX(90%); 
 }
 
 .cv .info .date {
@@ -638,6 +641,7 @@ article.dropdown .dropbtn.active {
   text-align: right;
   transform: translateY(-50%);
   color: grey;
+
   margin: 0;
   padding: 0;
 }
@@ -669,6 +673,7 @@ article.dropdown .dropbtn.active {
   height: 100%;
   width: 100%;
   background-color: var(--tint);
+
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -684,7 +689,87 @@ article.dropdown .dropbtn.active {
 .cv .info .period > .bar p,
 .cv .info .period > .bar p a{
   color: var(--primary);
+
 }
+
+section.about{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+section.about .ptext{
+  position: relative;
+}
+
+section.about  .portraet{
+  background-image: url(content/images/portraet.webp);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.ptext h1{
+  margin: 2%;
+  top: 0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: var(--primary);
+  grid-column: 1;
+  grid-row: 1;
+
+}
+
+
+.portraet > div{
+  width: 100%;
+  height: 100%;
+  background-color: var(--tint);
+  mix-blend-mode:multiply;
+
+}
+
+#aboutme{
+  display: grid;
+  grid-template-columns: 100% 100%;
+  
+  overflow-x: hidden;
+}
+
+#aboutme > div{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 5%;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+
+
+
+#aboutme > div h3{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+#aboutme.active > div{
+  transform: translateX(-100%);
+}
+
+section.about a.cta{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
 
 @media screen and (min-width: 800px) {
   section.minusfront {
@@ -865,4 +950,23 @@ article.dropdown .dropbtn.active {
     border-radius: 5px;
     /* background-color: var(--tint); */
   }
+  /* .cv{
+    overflow-x: scroll;
+    height: 190px;
+    width: 90%;
+    margin: 0;
+    margin-left: 3%;
+    border: solid 1px grey;
+    border-radius: 5px;
+
+  }
+  .cv .info{
+    transform: translateY(-45%) translateX(400px) rotate(-90deg);
+  } */
+  section.about{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  
 }
